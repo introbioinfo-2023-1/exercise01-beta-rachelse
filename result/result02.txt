@@ -1,0 +1,6 @@
+/home/exercise01/exercise01/data:
+Human_herpesvirus_1_strain_17
+data.txt
+
+/home/exercise01/exercise01/data/Human_herpesvirus_1_strain_17:
+NC_001806.2.fasta
