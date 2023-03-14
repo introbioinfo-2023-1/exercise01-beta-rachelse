@@ -1,0 +1,164 @@
+{
+  "tests": [
+    {
+      "name": "01 command",
+      "setup": "",
+      "run": "grep -q -P '(?=.*echo)(?=.*student_id)' command/command01.sh && grep -q -P '(?=.*wget)(?=.*fasta)' command/command01.sh && echo \"correct\"",
+      "input": "",
+      "output": "correct",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": null
+    },
+    {
+      "name": "01 result",
+      "setup": "",
+      "run": "cat  result/student_id.txt",
+      "input": "",
+      "output": "[0-9][0-9][0-9][0-9]-[0-9][0-9][0-9][0-9][0-9],.*",
+      "comparison": "regex",
+      "timeout": 10,
+      "points": null
+    },
+    {
+      "name": "02 command",
+      "setup": "",
+      "run": "grep -q -P '(?=.*mkdir)(?=.*Human_herpesvirus_1_strain_17)' command/command02.sh && grep -q -P '(?=.*mv)(?=.*fasta)' command/command02.sh && grep -q -P '(?=.*ls)(?=.*-R)' command/command02.sh && echo \"correct\"",
+      "input": "",
+      "output": "correct",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": null
+    },
+    {
+      "name": "02 result",
+      "setup": "",
+      "run": "cat  result/result02.txt",
+      "input": "",
+      "output": ".*data.*:\\nHuman_herpesvirus_1_strain_17\\ndata.txt\\n\\n.*data\\/Human_herpesvirus_1_strain_17.*:\\nNC_001806.2.fasta.*",
+      "comparison": "regex",
+      "timeout": 10,
+      "points": null
+    },
+    {
+      "name": "03_1 result",
+      "setup": "",
+      "run": "cat  result/result03_1.txt",
+      "input": "",
+      "output": ">NC_001806.2 Human herpesvirus 1 strain 17, complete genome\r\nAGCCCGGGCCCCCCGCGGGCGCGCGCGCGCGCAAAAAAGGCGGGCGGCGGTCCGGGCGGCGTGCGCGCGC\r\nGCGGCGGGCGTGGGGGGCGGGGCCGCGGGAGCGGGGGGAGGAGCGGGGGGAGGAGCGGGGGGAGGAGCGG\r\nGGGGAGGAGCGGGGGGAGGAGCGGGGGGAGGAGCGGGGGGAGGAGCGGGGGGAGGAGCGGGGGGAGGAGC\r\nGGGGGGAGGAGCGGGGGGAGGAGCGGGGGGAGGAGCGGGGGGAGGAGCGGGGGGAGGAGCGGGGGGAGGA",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": null
+    },
+    {
+      "name": "03_2 result",
+      "setup": "",
+      "run": "cat  result/result03_2.txt",
+      "input": "",
+      "output": "AGCGGGGGGAGGAGCGGGGGGAGGAGCGGGGGGAGGAGCGGGGGGAGGAGCGGGGGGAGGAGCGGGGGGA\r\nGGAGCGGGGGGAGGAGCGGGGGGAGGAGCGGGGGGAGGAGCGGGGGGAGGAGCGGGGGGAGGAGCGGGGG\r\nGAGGAGCGGGGGGAGGAGCGGGGGGAGGAGCGGCCAGACCCCGAAAACGGGCCCCCCCCAAAACACACCC\r\nCCCGGGGGTCGCGCGCGGCCCTTTAAAGCGGCGGCGGCGGGC",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": null
+    },
+    {
+      "name": "03_3 result",
+      "setup": "",
+      "run": "cat  result/result03_3.txt",
+      "input": "",
+      "output": "GACCGCCCGCAAGGGGGGGGGGGCATTTCAGTGTCGGGTGACGAGCGCGATCCGGCCGGGATCCTAGGAC\r\nCCCAAAAGTTTGTCTGCGTATTCCAGGGCGGGGCTCAGTTGAATCTCCCGCAGCACCTCTACCAGCAGGT\r\nCCGCGGTGGGCTGGAGAAACTCGGCCGTCCCGGGGCAGGCGGTTGTCGGGGGTGGAGGCGCGGCGCCCAC\r\nCCCGTGTGCCGCGCCTGGCGTCTCCTCTGGGGGCGACCCGTAAATGGTTGCAGTGATGTAAATGGTGTCC\r\nGCGGTCCAGACCACGGTCAAAATGCCGGCCGTGGCGCTCCGGGCGCTTTCGCCGCGCGAGGAGCTGACCC",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": null
+    },
+    {
+      "name": "03 command",
+      "setup": "",
+      "run": "grep -q -P '(?=.*head)(?=.*.fasta)' command/command03.sh  && grep -q -P '(?=.*tail)(?=.*.fasta)' command/command03.sh  && grep -q -P '(?=.*(awk|sed))(?=.*result03_3)' command/command03.sh && echo \"correct\"",
+      "input": "",
+      "output": "correct",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": null
+    },
+    {
+      "name": "04_1 result",
+      "setup": "",
+      "run": "cat  result/result04_1.txt",
+      "input": "",
+      "output": "2176",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": null
+    },
+    {
+      "name": "04_2 result",
+      "setup": "",
+      "run": "cat  result/result04_2.txt",
+      "input": "",
+      "output": "2142",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": null
+    },
+    {
+      "name": "04_3 result",
+      "setup": "",
+      "run": "cat  result/result04_3.txt",
+      "input": "",
+      "output": "GTGGGCCCGCGAGCGGGCCGACCGGGCTCGGTTCCGGCGCCGGGTGGCGGAGGCCGAGGCGGTCATCGGG\r\nGCGTAACCACTCCCCTGGGGTTCCGGGTTATGCTAATTGCTTTTTTGGCGGAACACACGGCCCCTCGCGC\r\nATTGGCCCGCGGGTCGCTCAATGAACCCGCATTGGTCCCCTGGGGTTCCGGGTATGGTAATGAGTTTCTT\r\nAATGGGGTTCTTTGGGGGACACCGGGTTGGGCCCCCAAATCGGGGGCCGGGCCGTGCATGCTAATGATAT\r\nTCAGCGGTTCGCCCCGCGGTACCTGACCCTGGGGGGGCACACGGTGAGGGCCCTGTCGCCCACCCACCCG",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": null
+    },
+    {
+      "name": "04 command",
+      "setup": "",
+      "run": "grep -q -P '(?=.*grep)(?=.*.fasta)(?=.*wc)' command/command04.sh && grep -q -P '(?=.*grep)(?=.*.fasta)(?=.*wc)(?=.*ATATA)' command/command04.sh && grep -q -P '(?=.*grep)(?=.*.fasta)(?=.*head)(?=.*GGTTC)' command/command04.sh  && echo \"correct\"",
+      "input": "",
+      "output": "correct",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": null
+    },
+    {
+      "name": "05_1 result",
+      "setup": "",
+      "run": "cat  result/result05_1.txt",
+      "input": "",
+      "output": "13",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": null
+    },
+    {
+      "name": "05_2 result",
+      "setup": "",
+      "run": "cat  result/result05_2.txt",
+      "input": "",
+      "output": "102",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": null
+    },
+    {
+      "name": "05_3 result",
+      "setup": "",
+      "run": "cat  result/result05_3.csv",
+      "input": "",
+      "output": "24225,24028,52530,51439",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": null
+    },
+    {
+      "name": "05 command",
+      "setup": "",
+      "run": "grep -q -P '(?=.*grep)(?=.*wc)(?=.*GAATTC)' command/command05.sh  && grep -q -P '(?=.*grep)(?=.*wc)(?=.*GT)(?=.*(TC|CT))(?=.*(AG|GA))(?=.*AC)' command/command05.sh  && grep -q -P '(?=.*(grep|awk))(?=.*count\\[\"A\"\\])' command/command05.sh  && echo \"correct\"",
+      "input": "",
+      "output": "correct",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": null
+    }
+  ]
+}
