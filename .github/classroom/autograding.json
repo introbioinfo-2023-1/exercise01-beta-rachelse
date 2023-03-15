@@ -23,7 +23,7 @@
     {
       "name": "02 command",
       "setup": "",
-      "run": "grep -q -P '(?=.*mkdir)(?=.*Human_herpesvirus_1_strain_17)' command/command02.sh && grep -q -P '(?=.*mv)(?=.*fasta)' command/command02.sh && grep -q -P '(?=.*ls)(?=.*-R)' command/command02.sh && echo \"correct\"",
+      "run": "grep -q -P '(?=.*ls)(?=.*data)(?=.*result/result02.txt)' command/command02.sh && echo \"correct\" ",
       "input": "",
       "output": "correct",
       "comparison": "exact",
@@ -33,9 +33,9 @@
     {
       "name": "02 result",
       "setup": "",
-      "run": "cat  result/result02.txt",
+      "run": "grep -q -P '(?=.*data\\:)' result/result02.txt && grep -q -P '(?=.*Saccharomyces_cerevisiae_S288C)' result/result02.txt && grep -q -P '(?=.*data.txt)' result/result02.txt && grep -q -P '(?=.*data/Saccharomyces_cerevisiae_S288C\\:)' result/result02.txt && grep -q -P '(?=.*NC_001133.9.fasta)' result/result02.txt && echo \"correct\"",
       "input": "",
-      "output": ".*data.*:\\nHuman_herpesvirus_1_strain_17\\ndata.txt\\n\\n.*data\\/Human_herpesvirus_1_strain_17.*:\\nNC_001806.2.fasta.*",
+      "output": "correct",
       "comparison": "regex",
       "timeout": 10,
       "points": null
@@ -45,7 +45,7 @@
       "setup": "",
       "run": "cat  result/result03_1.txt",
       "input": "",
-      "output": ">NC_001806.2 Human herpesvirus 1 strain 17, complete genome\r\nAGCCCGGGCCCCCCGCGGGCGCGCGCGCGCGCAAAAAAGGCGGGCGGCGGTCCGGGCGGCGTGCGCGCGC\r\nGCGGCGGGCGTGGGGGGCGGGGCCGCGGGAGCGGGGGGAGGAGCGGGGGGAGGAGCGGGGGGAGGAGCGG\r\nGGGGAGGAGCGGGGGGAGGAGCGGGGGGAGGAGCGGGGGGAGGAGCGGGGGGAGGAGCGGGGGGAGGAGC\r\nGGGGGGAGGAGCGGGGGGAGGAGCGGGGGGAGGAGCGGGGGGAGGAGCGGGGGGAGGAGCGGGGGGAGGA",
+      "output": ">NC_001133.1 Saccharomyces cerevisiae chromosome I, complete chromosome sequence\r\nCCACACCACACCCACACACCCACACACCACACCACACACCACACCACACCCACACACACACATCCTAACA\r\nCTACCCTAACACAGCCCTAATCTAACCCTGGCCAACCTGTCTCTCAACTTACCCTCCATTACCCTGCCTC\r\nCACTCGTTACCCTGTCCCATTCAACCATACCACTCCGAACCACCATCCATCCCTCTACTTACTACCACTC\r\nACCCACCGTTACCCTCCAATTACCCATATCCAACCCACTGCCACTTACCCTACCATTACCCTACCATCCA\r\nCCATGACCTACTCACCATACTGTTCTTCTACCCACCATATTGAAACGCTAACAAATGATCGTAAATAACA\r\nCACACGTGCTTACCCTACCACTTTATACCACCACCACATGCCATACTCACCCTCACTTGTATACTGATTTAGCCCGGGCCCCCCGCGGGCGCGCGCGCGCGCAAAAAAGGCGGGCGGCGGTCCGGGCGGCGTGCGCGCGC\r\nGCGGCGGGCGTGGGGGGCGGGGCCGCGGGAGCGGGGGGAGGAGCGGGGGGAGGAGCGGGGGGAGGAGCGG\r\nGGGGAGGAGCGGGGGGAGGAGCGGGGGGAGGAGCGGGGGGAGGAGCGGGGGGAGGAGCGGGGGGAGGAGC\r\nGGGGGGAGGAGCGGGGGGAGGAGCGGGGGGAGGAGCGGGGGGAGGAGCGGGGGGAGGAGCGGGGGGAGGA",
       "comparison": "exact",
       "timeout": 10,
       "points": null
@@ -55,7 +55,7 @@
       "setup": "",
       "run": "cat  result/result03_2.txt",
       "input": "",
-      "output": "AGCGGGGGGAGGAGCGGGGGGAGGAGCGGGGGGAGGAGCGGGGGGAGGAGCGGGGGGAGGAGCGGGGGGA\r\nGGAGCGGGGGGAGGAGCGGGGGGAGGAGCGGGGGGAGGAGCGGGGGGAGGAGCGGGGGGAGGAGCGGGGG\r\nGAGGAGCGGGGGGAGGAGCGGGGGGAGGAGCGGCCAGACCCCGAAAACGGGCCCCCCCCAAAACACACCC\r\nCCCGGGGGTCGCGCGCGGCCCTTTAAAGCGGCGGCGGCGGGC",
+      "output": "GTGAGTGGATAGTGAGTGGATGGATGGTGGAGTGGGGGAATGAGACAGGGCATGGGGTGGTGAGGTAAGT\r\nGCCGTGGATTGTGATGATGGAGAGGGAGGGTAGTTGACATGGAGTTAGAATTGGGTCAGTGTTAGTGTTA\r\nGTGTTAGTATTAGGGTGTGGTGTGTGGGTGTGGTGTGGGTGTGGGTGTGGGTGTGGGTGTGGGTGTGGGT\r\nGTGGTGTGGTGTGTGGGTGTGGTGTGGGTGTGGTGTGTGTGGG",
       "comparison": "exact",
       "timeout": 10,
       "points": null
@@ -65,7 +65,7 @@
       "setup": "",
       "run": "cat  result/result03_3.txt",
       "input": "",
-      "output": "GACCGCCCGCAAGGGGGGGGGGGCATTTCAGTGTCGGGTGACGAGCGCGATCCGGCCGGGATCCTAGGAC\r\nCCCAAAAGTTTGTCTGCGTATTCCAGGGCGGGGCTCAGTTGAATCTCCCGCAGCACCTCTACCAGCAGGT\r\nCCGCGGTGGGCTGGAGAAACTCGGCCGTCCCGGGGCAGGCGGTTGTCGGGGGTGGAGGCGCGGCGCCCAC\r\nCCCGTGTGCCGCGCCTGGCGTCTCCTCTGGGGGCGACCCGTAAATGGTTGCAGTGATGTAAATGGTGTCC\r\nGCGGTCCAGACCACGGTCAAAATGCCGGCCGTGGCGCTCCGGGCGCTTTCGCCGCGCGAGGAGCTGACCC",
+      "output": "TCGACATATAAAAGTGGGGCAGATACTTCGTGTGACAATGGCCAATTCAAGCCCTTTGGGCAGATGTTGC\r\nCCTTCTTCTTTCTTAAAAAGTCTTAGTACGATTGACCAAGTCAGAAAAAAAAAAAAAAAGGAACTAAAAA\r\nAAGTTTTAATTAATTATGAGAGCTTTGGCATATTTCAAGAAGGGTGATATTCACTTCACTAATGATATCC\r\nCTAGGCCAGAAATCCAAACCGACGATGAGGTTATTATCGACGTCTCTTGGTGTGGGATTTGTGGCTCGGA\r\nTCTTCACGAGTACTTGGATGGTCCAATCTTCATGCCTAAAGATGGAGAGTGCCATAAATTATCCAACGCT\r\nGCTTTACCTCTGGCAATGGGCCATGAGATGTCAGGAATTGTTTCCAAGGTTGGTCCTAAAGTGACAAAGG\r\nTGAAGGTTGGCGACCACGTGGTCGTTGATGCTGCCAGCAGTTGTGCGGACCTGCATTGCTGGCCACACTC\r\nCAAATTTTACAATTCCAAACCATGTGATGCTTGTCAGAGGGGCAGTGAAAATCTATGTACCCACGCCGGT\r\nTTTGTAGGACTAGGTGTGATCAGTGGTGGCTTTGCTGAACAAGTCGTAGTCTCTCAACATCACATTATCC\r\nCGGTTCCAAAGGAAATTCCTCTAGATGTGGCTGCTTTAGTTGAGCCTCTTTCTGTCACCTGGCATGCTGT\r\nTAAGATTTCTGGTTTCAAAAAAGGCAGTTCAGCCTTGGTTCTTGGTGCAGGTCCCATTGGGTTGTGTACC\r\nATTTTGGTACTTAAGGGAATGGGGGCTAGTAAAATTGTAGTGTCTGAAATTGCAGAGAGAAGAATAGAAA\r\nTGGCCAAGAAACTGGGCGTTGAGGTGTTCAATCCCTCCAAGCACGGTCATAAATCTATAGAGATACTACG\r\nTGGTTTGACCAAGAGCCATGATGGGTTTGATTACAGTTATGATTGTTCTGGTATTCAAGTTACTTTCGAA\r\nACCTCTTTGAAGGCATTAACATTCAAGGGGACAGCCACCAACATTGCAGTTTGGGGTCCAAAACCTGTCC\r\nCATTCCAACCAATGGATGTGACTCTCCAAGAGAAAGTTATGACTGGTTCGATCGGCTATGTTGTCGAAGC\r\nCTTCGAAGAAGTTGTTCGTGCCATCCACAACGGAGACATCGCCATGGAAGATTGTAAGCAACTAATCACT\r\nGGTAAGCAAAGGATTGAGGACGGTTGGGAAAAGGGATTCCAAGAGTTGATGGATCACAAGGAATCCAACG\r\nTTAAGATTCTATTGACGCCTAACAATCACGGTGAAATGAAGTAATGACAAAATAATATTTGGGGCCCCTC\r\nGCGGCTCATTTGTAGTATCTAAGATTATGTATTTTCTTTTATAATATTTGTTGTTATGAAACAGACAGAA\r\nGTAAGTTTCTGCGACTATATTATTTTTTTTTTTCTTCTTTTTTTTTCCTTTATTCAACTTGGCGATGAGC\r\nTGAAAATTTTTTTGGTTAAGGACCCTTTAGAAGTATTGAATGTGGGAACAAAGACGACAAAAGGTAGTTT\r\nTTTCCTTGACTATACTGGTAAGATATCGTCTAAAACAAAGCATGGCCAAGAAAATATCAAAGAATTCAAG\r\nAGCTGCTAGACAATCGGATGCTCTTGAACCAGAGGTAAAGGATTTAAGTGAACTACCTAGAGCTGAAAAA",
       "comparison": "exact",
       "timeout": 10,
       "points": null
@@ -73,7 +73,7 @@
     {
       "name": "03 command",
       "setup": "",
-      "run": "grep -q -P '(?=.*head)(?=.*.fasta)' command/command03.sh  && grep -q -P '(?=.*tail)(?=.*.fasta)' command/command03.sh  && grep -q -P '(?=.*(awk|sed))(?=.*result03_3)' command/command03.sh && echo \"correct\"",
+      "run": "grep -q -P '(?=.*head)(?=.*7)(?=.*.data/Saccharomyces_cerevisiae_S288C/NC_001133.9.fasta)(?=.*.result/result03_1.txt)' command/command03.sh  && grep -q -P '(?=.*tail)(?=.*5)(?=.*.data/Saccharomyces_cerevisiae_S288C/NC_001133.9.fasta)(?=.*.result/result03_2.txt)' command/command03.sh  && grep -q -P '(?=.*(awk|sed))(?=.*.data/Saccharomyces_cerevisiae_S288C/NC_001133.9.fasta)(?=.*result03_3)' command/command03.sh && echo \"correct\"",
       "input": "",
       "output": "correct",
       "comparison": "exact",
@@ -85,7 +85,7 @@
       "setup": "",
       "run": "cat  result/result04_1.txt",
       "input": "",
-      "output": "2176",
+      "output": "3290",
       "comparison": "exact",
       "timeout": 10,
       "points": null
@@ -95,7 +95,7 @@
       "setup": "",
       "run": "cat  result/result04_2.txt",
       "input": "",
-      "output": "2142",
+      "output": "2914",
       "comparison": "exact",
       "timeout": 10,
       "points": null
@@ -105,7 +105,7 @@
       "setup": "",
       "run": "cat  result/result04_3.txt",
       "input": "",
-      "output": "GTGGGCCCGCGAGCGGGCCGACCGGGCTCGGTTCCGGCGCCGGGTGGCGGAGGCCGAGGCGGTCATCGGG\r\nGCGTAACCACTCCCCTGGGGTTCCGGGTTATGCTAATTGCTTTTTTGGCGGAACACACGGCCCCTCGCGC\r\nATTGGCCCGCGGGTCGCTCAATGAACCCGCATTGGTCCCCTGGGGTTCCGGGTATGGTAATGAGTTTCTT\r\nAATGGGGTTCTTTGGGGGACACCGGGTTGGGCCCCCAAATCGGGGGCCGGGCCGTGCATGCTAATGATAT\r\nTCAGCGGTTCGCCCCGCGGTACCTGACCCTGGGGGGGCACACGGTGAGGGCCCTGTCGCCCACCCACCCG",
+      "output": "AGTTTCTTTCTTATGTTCATCGTATTCATAAAATGCTTCACGAACACCGTCATTGATCAAATAGGTCTAT\r\nACGGCTTCAGCAACTTCGACTGGGTAGGTTTCAGTTGGGTGGGCGGCTTGGAACATGTAGTATTGGGCTA\r\nGAAGCTTATTGTCTAAGCCTGAATTCAGTCTGCTTTAAACGGCTTCCGCGGAGGAAATATTTCCATCTCT\r\nAGTGAAAATTCTCTTGAGAACCAAAGTAAACCTTCATTGAAGAGCTTCCTTAAAAAATTTAGAATCTCCC\r\nTGAGTGCTTCAGTCATTGCAAAATTTTACGAGATTTAAAATTTGTGAACCCGACCTTACCGAGAAATGAT",
       "comparison": "exact",
       "timeout": 10,
       "points": null
@@ -113,7 +113,7 @@
     {
       "name": "04 command",
       "setup": "",
-      "run": "grep -q -P '(?=.*grep)(?=.*.fasta)(?=.*wc)' command/command04.sh && grep -q -P '(?=.*grep)(?=.*.fasta)(?=.*wc)(?=.*ATATA)' command/command04.sh && grep -q -P '(?=.*grep)(?=.*.fasta)(?=.*head)(?=.*GGTTC)' command/command04.sh  && echo \"correct\"",
+      "run": "grep -q -P '(?=.*grep)(?=.*.>)(?=.*wc)' command/command04.sh && grep -q -P '(?=.*grep)(?=.*>|ATATA)(?=.*wc)' command/command04.sh && grep -q -P '(?=.*grep)(?=.*GCTTC)(?=.*head)' command/command04.sh && echo \"correct\"",
       "input": "",
       "output": "correct",
       "comparison": "exact",
@@ -125,7 +125,7 @@
       "setup": "",
       "run": "cat  result/result05_1.txt",
       "input": "",
-      "output": "13",
+      "output": "74",
       "comparison": "exact",
       "timeout": 10,
       "points": null
@@ -135,7 +135,7 @@
       "setup": "",
       "run": "cat  result/result05_2.txt",
       "input": "",
-      "output": "102",
+      "output": "153",
       "comparison": "exact",
       "timeout": 10,
       "points": null
@@ -145,7 +145,7 @@
       "setup": "",
       "run": "cat  result/result05_3.csv",
       "input": "",
-      "output": "24225,24028,52530,51439",
+      "output": "69830,69969,44641,45763",
       "comparison": "exact",
       "timeout": 10,
       "points": null
