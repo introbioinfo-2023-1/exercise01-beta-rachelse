@@ -10,5 +10,5 @@ echo "2023-23000,rachelse" > ./result/student_id.txt
 # - Hint:
 #   - You can avoid parsing error by embracing the link with " ".
 #   - The name of the downloaded will be not proper : use -O option (search its usage)
-wget "http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nucleotide&id=NC_001133.1&rettype=fasta" -O ./data/"NC_001133.9.fasta"
+wget "http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nucleotide&id=NC_001133.9&rettype=fasta" -O ./data/"NC_001133.9.fasta"
 
