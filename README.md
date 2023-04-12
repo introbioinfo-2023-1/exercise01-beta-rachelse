@@ -46,7 +46,7 @@ To submit your result, follow these steps:
 - Step 2. Save the result in the "result" directory. Save file as ./result/resultXX_X.txt or ./result/resultXX_X.csv
     > "." is relative path for current working directory and "./result/" is the directory named "result" in the current directory.   
 
-    > To save outcome as a file, you may use redirection to files.
+    > To save outcome as a file, you may use **redirection** to files.
 - Step 3. Add edited files to git and commit. You can use the commands below or GUI of cloud shell editor.
     ```sh
     # Tell git who you are.
@@ -86,7 +86,7 @@ in UNIX environment.
 Please write your commands in commandXX.sh and save your result to resultXX.txt (or resultXX.csv)
 
 ## command01.sh
-1. Print your student number and github ID and copy the printed result to **student_id.txt**.
+1. Print your student number and github ID and redirect the printed result to save to **student_id.txt**.
 The format should be like "2021-#####,harryporter" without ".
     > You can check your github ID at the top right corner of the github page.
     ![githubID](img/github_id.png)
@@ -100,40 +100,39 @@ The format should be like "2021-#####,harryporter" without ".
   - The name of the downloaded will be not proper : use -O option (search its usage)
 
 ## command02.sh
-- Sequence name: Saccharomyces cerevisiae S288C chromosome I, complete sequence
-- NCBI accession number: NC_001133.9
-- Download link:
-    - http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nucleotide&id=NC_001133.9&rettype=fasta
+1. Create a directory, named as the given sequence name "Saccharomyces_cerevisiae_S288C", in data directory.
+Move the downloaded fasta file to the directory created. (No result file)
 
-2. Print the list of files inside the data directory and copy the printed result to **result02.txt**.
+2. Print the list of files inside the data directory and redirect the result to **result02.txt**.
+    > Caution!: Include files in subdirectores.
 
 ## command03.sh
-1. Print first 7 lines of the downloaded fasta file and copy the printed result to **result03_1.txt**.
-2. Print last 5 lines of the downloaded fasta file and copy the printed result to **result03_2.txt**.
+1. Print first 7 lines of the downloaded fasta file and redirect the printed result to **result03_1.txt**.
+2. Print last 5 lines of the downloaded fasta file and redirect the printed result to **result03_2.txt**.
    - If the last line of the downloaded fasta file is blank, included it.  
-4. Print from line 502 to line 525 (24 lines) of the downloaded fasta file and copy the printed result to **result03_3.txt**.
+4. Print from line 502 to line 525 (24 lines) of the downloaded fasta file and redirect the printed result to **result03_3.txt**.
 
 ## command04.sh
 1. How many lines are in this fasta file except for the header line? (The header lines start with ">".)
-Write the number of lines except header lines to **result04_1.txt**.
+Redirect the number of lines except header lines to **result04_1.txt**.
 
 2. How many DNA sequence lines (excluding header) of this fasta file 'not' containing "ATATA"?
-Write the number of lines not containing "ATATA" to **result04_2.txt**.
+Redirect the number of lines not containing "ATATA" to **result04_2.txt**.
 
-3. From the fasta file, print the first 5 lines containing "GCTTC" and save the result to **result04_3.txt**.
+3. From the fasta file, print the first 5 lines containing "GCTTC" and redirect the result to **result04_3.txt**.
 
 
 ## command05.sh
 1. Restriction enzymes cut DNA by acting only on certain motifs (motif means specific sequences of bases).
 EcoRI is a well-known restriction enzyme from *E. coli* and is used in various molecular genetics techniques. 
-Identify the motif of EcoRI by searching online, get the number of motifs in the fasta file and save the number to **result05_1.txt**.
+Identify the motif of EcoRI by searching online, get the number of motifs in the fasta file and redirect the number to **result05_1.txt**.
     > EcoRI motif consists of 6 bases.
     > Don't consider the sites split by the new line character - just count the sites fully contained in a line.
 2. Another restiction enzyme, HincII from *Haemophilus influenzae* recognizes a specific nucleotide pattern like this:
 
     ![hincii](img/hincii.gif)
 
-    Save the number of HincII recognition sites in the fasta file to **result05_2.txt**.
+    redirect the number of HincII recognition sites in the fasta file to **result05_2.txt**.
     > Don't consider the sites split by the new line character. Try using regular expressions. 
 
 
